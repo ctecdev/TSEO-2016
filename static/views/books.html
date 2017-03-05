@@ -1,0 +1,162 @@
+<!-- START leftSidebar -->
+<div id="leftSidebar">
+	
+	<!-- START sidebarIcon -->
+	<div id="sidebarIcon">
+		<a href="#/">
+            <img class="icon-sidebar" src="images/ebook.png">
+		</a>
+		
+	</div>
+	<!-- END sidebarIcon -->
+	<br>
+	<h4 class="page-head-line">Categories</h4>
+</div>
+<!-- END leftSidebar -->
+
+<!-- START content -->
+<div id="content">
+
+	<!-- START seachFilter -->
+	<div id="searchFilter" class="col-md-12">
+		
+		<h4 class="page-head-line">Search Filter</h4>
+		<form action="SearchExec" method="post">
+			<table>
+				<tr>
+					<th>Atributes</th>
+					<th>Term</th>
+					<th>Type</th>
+					<th>Condition</th>
+				</tr>
+				<tr>
+					<td>Keywords</td>
+					<td><input type="text" name="kw"/></td>
+					<td><select name="kwst">
+							<c:forEach items="${searchTypes}" var="st">
+								<option value="${st}">${st}</option>
+							</c:forEach>
+						</select>
+					</td>
+					<td><select name="kwsc">
+							<c:forEach items="${occures}" var="o">
+								<option value="${o}">${o}</option>
+							</c:forEach>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Title</td>
+					<td><input type="text" name="title"/></td>
+					<td><select name="titlest">
+							<c:forEach items="${searchTypes}" var="st">
+								<option value="${st}">${st}</option>
+							</c:forEach>
+						</select>
+					</td>
+					<td><select name="titlesc">
+							<c:forEach items="${occures}" var="o">
+								<option value="${o}">${o}</option>
+							</c:forEach>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Content</td>
+					<td><input type="text" name="text"/></td>
+					<td><select name="textst">
+							<c:forEach items="${searchTypes}" var="st">
+								<option value="${st}">${st}</option>
+							</c:forEach>
+						</select>
+					</td>
+					<td><select name="textsc">
+							<c:forEach items="${occures}" var="o">
+								<option value="${o}">${o}</option>
+							</c:forEach>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Author</td>
+					<td><input type="text" name="author"/></td>
+					<td><select name="authorst">
+							<c:forEach items="${searchTypes}" var="st">
+								<option value="${st}">${st}</option>
+							</c:forEach>
+						</select>
+					</td>
+					<td><select name="authorsc">
+							<c:forEach items="${occures}" var="o">
+								<option value="${o}">${o}</option>
+							</c:forEach>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Language</td>
+					<td><input type="text" name="language"/></td>
+					<td><select name="languagest">
+							<c:forEach items="${searchTypes}" var="st">
+								<option value="${st}">${st}</option>
+							</c:forEach>
+						</select>
+					</td>
+					<td><select name="languagesc">
+							<c:forEach items="${occures}" var="o">
+								<option value="${o}">${o}</option>
+							</c:forEach>
+						</select>
+					</td>
+				</tr>
+				<tr><td colspan="4" align="center"><input type="submit" value="Search"/></td></tr>
+			</table>
+		</form>
+	
+	</div>
+	<!-- END seachFilter -->
+	
+	<div>
+	  <h3>
+	  	Books
+	  	<a class="mb10 right" ng-href="#/books/new">
+		  <button type="button" class="btn btn-default" aria-label="Add">
+		    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		  </button>
+	  	</a>
+	  </h3>
+	</div>
+	
+	<table class="table table-bordered">
+	  <tr>
+	    <th>Title</th>
+	    <th>Author</th>
+	    <th>Akcija</th>
+	  </tr>
+	  <tr ng-repeat="ebook in ebooks">
+	    <td>
+	      {{ebook.title}}
+	    </td>
+	    <td>
+	      {{ebook.author}}
+	    </td>
+	    <td>
+	      <a ng-href="#/students/{{student.studentID}}">
+	        <button type="button" class="btn btn-default" aria-label="Izmena">
+		        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+		    </button>
+	      </a>
+	      
+	
+	      <button type="button" class="btn btn-default" aria-label="Brisanje" ng-click="deleteStudent(student.studentID)">
+	        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+	      </button>
+	    </td>
+	  </tr>
+	  
+	</table>
+
+</div>
+<!-- END content -->
+
+

@@ -1,0 +1,64 @@
+<div>
+  <h3 translate>Profesori</h3>
+</div>
+<p ng-if="">
+</p>
+<table class="table table-bordered">
+  <tr>
+    <th translate>Ime</th>
+    <th translate>Prezime</th>
+    <th translate>Zvanje</th>
+    <th translate>Akcija</th>
+  </tr>
+  <tr ng-if="profesorK==null" ng-repeat="p in professorsPage| filter:pretraga| limitTo:5">
+    <td>
+      {{p.korisnik.ime}}
+    </td>
+    <td>
+      {{p.korisnik.prezime}}
+    </td>
+    <td>
+      {{p.zvanje}}
+    </td>
+    <td>
+    	<a ng-href="#/professors/{{p.profesorID}}">
+    		<button type="button" class="btn btn-default" aria-label="Izmena" >
+		        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+		    </button>
+    	</a>
+    	
+      <button type="button" class="btn btn-default" aria-label="Brisanje" ng-click="deleteProfessor(p.profesorID)">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </td>
+  </tr>
+    <tr ng-if="profesorK!=null">
+    <td>
+      {{profesorK.korisnik.ime}}
+    </td>
+    <td>
+      {{profesorK.korisnik.prezime}}
+    </td>      
+    <td>
+      {{profesorK.zvanje}}
+    </td>
+    <td>
+      <a ng-href="#/professors/{{profesorK.profesorID}}">
+        <button type="button" class="btn btn-default" aria-label="Izmena">
+	        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+	    </button>
+      </a>
+  </tr>
+</table>
+<div class="right" ng-if="profesorK==null">
+	<a ng-href="#/professors/new">
+		<button type="button" class="btn btn-default" aria-label="Dodavanje">
+		    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		</button>
+	</a>
+</div>
+<ul class="nav navbar-paging" ng-if="pages.length>1">
+	<li ng-if="profesorK==null" ng-repeat="p in pages track by $index">
+	 	<span ng-click="page(p)">{{p+1}}</span>
+	</li>
+</ul>

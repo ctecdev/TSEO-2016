@@ -1,0 +1,47 @@
+<div class="modal-header">
+  <h3 class="modal-title" translate>E-racun</h3>
+</div>
+<div class="modal-body">
+  <form>
+    <fieldset class="form-group">
+      <label for="stanjeNaERacunu" translate>Stanje na racunu</label>
+      <input type="text" class="form-control" id="stanjeNaERacunu" ng-model="eRacun.stanjeNaERacunu">
+    </fieldset>
+  </form>
+    <span class="right">
+      <button type="button" class="btn btn-default" aria-label="Izmena stanja" ng-if="studentK==null"  ng-click="updataERacun()">
+        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+      </button>
+    </span>
+    <br>
+    <label translate>Uplate</label>
+    <table class="table table-bordered">
+  		<tr>
+    		<th translate>Svrha uplate</th>
+    		<th translate>Iznos</th>
+    		<th ng-if="studentK==null" translate>Akcija</th>
+ 		</tr>
+    	<tr ng-repeat="u in uplate">
+    		<td>{{u.svrha}}</td>
+    		<td>{{u.iznos}}</td>
+    		<td ng-if="studentK==null">
+     			<button type="button" class="btn btn-default" aria-label="Izmena" ng-click="openModalU(u)">
+       			<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+      			</button>
+
+      			<button  type="button" class="btn btn-default" aria-label="Brisanje" ng-click="deleteUplata(u.uplataID)">
+       			<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      			</button>
+    		</td>
+    	</tr>
+    </table>
+    
+    <div class="right">
+  <button type="button" class="btn btn-default" aria-label="Dodavanje" ng-if="studentK==null" ng-click="openModalU()">
+    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+  </button>
+</div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-default" type="button" ng-click="cancel()" translate>U redu</button>
+</div>

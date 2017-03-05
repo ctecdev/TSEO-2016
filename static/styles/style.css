@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+
+#leftSidebar {
+  float: left;
+  width: 30%;
+  height: 300px;
+}
+
+#content {
+  float: right;
+  width: 70%;
+}
+
+.icon-sidebar {
+	width: 100%
+}

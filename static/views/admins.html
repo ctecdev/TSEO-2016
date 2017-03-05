@@ -1,0 +1,41 @@
+<div>
+  <h3 translate>Administratori</h3>
+</div>
+<table class="table table-bordered">
+  <tr>
+    <th translate>Ime</th>
+    <th translate>Prezime</th>
+    <th translate>Akcija</th>
+  </tr>
+  <tr ng-repeat="a in adminsPage| filter:pretraga| limitTo:5">
+    <td>
+      {{a.korisnik.ime}}
+    </td>
+    <td>
+      {{a.korisnik.prezime}}
+    </td>
+    <td>
+      <a ng-href="#/admins/{{a.adminID}}">
+	      <button type="button" class="btn btn-default" aria-label="Izmena" >
+	        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+	      </button>
+      </a>
+
+      <button type="button" class="btn btn-default" aria-label="Brisanje" ng-click="deleteAdmin(a.adminID)">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="right">
+	 <a ng-href="#/admins/new">
+	 	<button type="button" class="btn btn-default" aria-label="Dodavanje" >
+		    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+		</button>
+	 </a>
+</div>
+<ul class="nav navbar-paging" ng-if="pages.length>1">
+	<li ng-repeat="p in pages track by $index">
+	 	<span ng-click="page(p)">{{p+1}}</span>
+	</li>
+</ul>

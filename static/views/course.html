@@ -1,0 +1,89 @@
+<div class="modal-header">
+  <h3 class="modal-title" translate>Kurs</h3>
+</div>
+<div class="modal-body">
+  	<form>
+      <fieldset class="form-group">
+        <label for="name" translate>Naziv</label>
+        <input type="text" class="form-control" id="name" ng-model="course.naziv">
+      </fieldset>
+  	</form>
+    <label translate>Studenti</label>
+    <table class="table table-bordered">
+      <tr ng-repeat="enrollment in enrollments">
+        <td>
+          {{enrollment.student.korisnik.ime}} {{enrollment.student.korisnik.prezime}} {{enrollment.student.brojIndexa}}
+          <button type="button" class="btn btn-default right" aria-label="Brisanje" ng-click="deleteEnrollment(enrollment.pohadjaID)">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </td>
+      </tr>
+    </table>
+    <span class="right">
+      <button type="button" class="btn btn-default" aria-label="Dodavanje"  ng-click="openModalS(course)">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </span>
+    <br>
+    <label translate>Profesori</label>
+    <table class="table table-bordered">
+      <tr ng-repeat="t in teachings">
+        <td>
+          {{t.profesor.korisnik.ime}} {{t.profesor.korisnik.prezime}} {{t.profesor.zvanje}}
+          <button type="button" class="btn btn-default right" aria-label="Brisanje" ng-click="deleteTeaching(t.predajeID)">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </td>     
+      </tr>
+    </table>
+    <span class="right">
+      <button type="button" class="btn btn-default" aria-label="Dodavanje"  ng-click="openModalT(course)">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </span>
+    
+    <!-- START obaveze -->
+    <br>
+    <label translate>Tipovi obaveza</label>
+    <table class="table table-bordered">
+      <tr>
+      	<th translate>Naziv</th>
+      	<th translate>Opis</th>
+      	<th translate>Datum</th>
+      	<th translate>Akcija</th>
+      </tr>
+      <tr ng-repeat="task in tasks">
+        <td>
+          {{task.naziv}} 
+       	</td>
+       	<td>
+          {{task.opis}}
+        </td>
+        <td>
+          {{task.datum}}
+        </td>
+        <td>
+          <button type="button" class="btn btn-default" aria-label="Izmena"  ng-click="openModalO(task)">
+	        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+	      </button>
+          <button type="button" class="btn btn-default" aria-label="Brisanje" ng-click="deleteTaskType(task.tipObavezeID)">
+            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+          </button>
+        </td>
+      </tr>
+      </table>
+    <span class="right">
+      <button type="button" class="btn btn-default" aria-label="Dodavanje"  ng-click="openModalO(task)">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+      </button>
+    </span>
+    <!-- END obaveze -->
+</div>
+<div class="modal-footer">
+	<a ng-href="#/courses/">
+		<button class="btn btn-default" type="button" ng-click="ok()" translate>U redu</button>
+	</a>
+	<a ng-href="#/courses/">
+		 <button class="btn btn-default" type="button" translate>Nazad</button>
+	</a>
+</div>
