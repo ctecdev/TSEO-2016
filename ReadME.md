@@ -18,7 +18,7 @@ Klijent - Server Web aplikacija
 ### Realizacija i tehnologije
 
 Klijentski deo - Single Page Application # AngularJS ( static/... )  
-Serverski deo - Java platforma # SpringBoot radni okvir
+Serverski deo - REST API # Java platforma # SpringBoot radni okvir
 Baza podataka - MySQL
 	
 ## Pokretanje Aplikacije
@@ -41,3 +41,6 @@ Baza podataka - MySQL
 7. Ponovo pokrenuti aplikaciju
 	- sada se mozemo prijaviti
 	- prijava > administrator > username: pera password: pera 
+	
+### Saradnici na projektu
+	Srdjan Gojkovic - kolega student
