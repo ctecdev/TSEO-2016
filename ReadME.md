@@ -30,7 +30,7 @@ Baza podataka - MySQL
 	podaci za pristup >>> /src/main/resources/application.properties
 	- kreirati bazu sa odgovarajucim nazivom
 5. Pokretanje aplikacije
-	- unutar paketa rs.ac.uns.ftn.tseo (/src/main/java/) 
+	- unutar paketa rs.ac.uns.ftn.tseo.ctecdev (/src/main/java/) 
 	  nalazi se klasa TSEO_2016_App.java
 	- desni-klik na klasu > Run As > Java Application
 6. Inicijalizacija baze podataka
