@@ -18,12 +18,14 @@ What things you need to install the software and how to install them
 [Ruby](https://www.ruby-lang.org/en/)
 
 [Ruby's gem compass](http://compass-style.org/install/)
-	`gem install compass`
-
+```
+	gem install compass
+```
 [Node.js](https://nodejs.org/en/)
-	`npm install grunt-cli -g`
-	`npm install bower -g`
-
+```
+	npm install grunt-cli -g
+	npm install bower -g
+```
 ### Setup
 
 A step by step series of examples that tell you have to get a development env running
