@@ -72,10 +72,12 @@ Go to `http://localhost:8080/` or if you changed port `http://localhost:<port-nu
 ### Testing
 
 To test app login as admin
+
 ![login-user-type](img/user_type.jpg)
 
 Username: pera 
 Password: pera
+
 ![admin-login](img/admin_login.jpg)
 
 ## Built With 
