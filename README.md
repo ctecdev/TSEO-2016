@@ -93,7 +93,6 @@ Password: pera
 * [ AngularJS ](https://docs.angularjs.org/guide) - FrontEnd 
 * [ SpringBoot framework ](https://projects.spring.io/spring-boot/) - BackEnd
 * [ Maven ](https://maven.apache.org/) - Dependency Management
-* [ Activiti BPMN 2.0 Platform ](https://www.activiti.org/)
 
 ## Authors
 
