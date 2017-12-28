@@ -11,12 +11,12 @@ import org.springframework.web.multipart.MultipartResolver;
 import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 
 @SpringBootApplication  // same as @Configuration @EnableAutoConfiguration @ComponentScan
-public class TSEO_2016_App {
+public class Admin_Edu_Ins_App {
 
 	public static void main( String[] args )
     {
-		SpringApplication.run(TSEO_2016_App.class, args);
-    	System.out.println("<<<>>>	TSEO_2016_App STARTED	<<<>>>");
+		SpringApplication.run(Admin_Edu_Ins_App.class, args);
+    	System.out.println("<<<>>>	Admin_Edu_Ins_App STARTED	<<<>>>");
     }
 	
 	/**

@@ -4,11 +4,11 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>rs.ac.uns.ftn.tseo.ctecdev</groupId>
-  <artifactId>TSEO-2016</artifactId>
+  <artifactId>admin-edu-ins</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
   
-  <name>TSEO-2016</name>
+  <name>admin-edu-ins</name>
   <url>http://maven.apache.org</url>
   
   <parent>
