@@ -12,10 +12,14 @@ These instructions will get you a copy of the project up and running on your loc
 What things you need to install the software and how to install them
 
 [Java 1.8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+
 [Maven](https://maven.apache.org/)
+
 [Ruby](https://www.ruby-lang.org/en/)
+
 [Ruby's gem compass](http://compass-style.org/install/)
 	`gem install compass`
+
 [Node.js](https://nodejs.org/en/)
 	`npm install grunt-cli -g`
 	`npm install bower -g`
@@ -103,6 +107,6 @@ Password: pera
 ![students](img/students.jpg)
 ![student](img/student.jpg)
 ![courses](img/course.jpg)
-![course](img/course)
+![course](img/course.jpg)
 
 
